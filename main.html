@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISWARYAM FARMS</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="./Asset1/Newlogo.jpg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Orbitron">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Gruppo">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Space+Mono">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            color: #1b5903;
+            z-index: 1000;
+            border-bottom: 2px solid #1b5903;
+        }
+
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 0;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Great Vibes', cursive;
+            font-size: 30px;
+        }
+
+        .navbar .logo img {
+            height: 80px;
+            margin-right: 20px;
+            padding: 5px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+            color: #2e2929;
+            text-decoration: none;
+            font-size: 17px;
+            padding: 15px 18px;
+            border-radius: 4px;
+            transition: color 0.3s, transform 0.3s;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .navbar a {
+            transition: color 0.3s, transform 0.3s;
+            text-decoration: none;
+            color: #3abd06;
+        }
+
+        .navbar ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            background: #3ac205;
+            transition: width 1s ease;
+            bottom: 0;
+            left: 0;
+        }
+
+        .navbar ul li a:hover {
+            color: #3ac205;
+            transform: scale(1.1);
+        }
+
+        .navbar ul li a:hover::after {
+            width: 100%;
+        }
+
+        .content {
+            padding-top: 80px;
+        }
+
+        .section {
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .firstpic {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .firstpic video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .about .about1 {
+            flex: 1;
+            text-align: center;
+        }
+
+        .about .about1 img {
+            width: 80%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 50%;
+            padding: 20px;
+        }
+
+        .about .about-text {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .about .about-text h1 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 30px;
+            color: #1b5903;
+        }
+
+        .about .about-text h4 {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+
+        .about .about-text p {
+            color: #2c9204;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+        }
+
+        .last {
+            background-color: rgb(58, 57, 57);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .last .icons {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .last .icons a {
+            font-size: 30px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            color: rgb(117, 118, 117);
+            transition: color 0.3s, background-color 0.3s;
+        }
+
+        .last .icons a:hover {
+            color: black;
+            background-color: rgba(6, 251, 30, 0.957);
+            border-radius: 20px;
+        }
+
+        .last .heading h1 {
+            font-size: 40px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: rgb(52, 190, 28);
+        }
+
+        .last .coat h3,
+        .last .coat h5,
+        .last .coat h6 {
+            padding: 10px;
+        }
+
+        @keyframes slideright {
+            0% {
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slidetop {
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0px);
+                opacity: 1;
+            }
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 35%;
+            left: 50%;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 45px;
+            text-align: center;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-content {
+                flex-direction: column;
+            }
+
+            .about {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about .about-text {
+                padding: 10px;
+            }
+
+            .about .about1 img {
+                width: 70%;
+                max-width: 200px;
+            }
+
+            .firstpic {
+                height: 60vh;
+            }
+
+            .text-overlay {
+                font-size: 30px;
+                top: 30%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar ul li {
+                margin-left: 10px;
+            }
+
+            .navbar ul li a {
+                font-size: 14px;
+                padding: 10px 12px;
+            }
+
+            .firstpic {
+                height: 50vh;
+            }
+
+            .text-overlay {
+                font-size: 20px;
+                top: 25%;
+            }
+        }
+        @media (max-width: 768px) {
+    .navbar-content {
+        flex-direction: column;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about .about-text {
+        padding: 10px;
+    }
+
+    .about .about1 img {
+        width: 70%;
+        max-width: 200px;
+    }
+
+    .firstpic {
+        height: 60vh;
+    }
+
+    .text-overlay {
+        font-size: 30px;
+        top: 30%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul li {
+        margin-left: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    .firstpic {
+        height: 50vh;
+    }
+
+    .text-overlay {
+        font-size: 20px;
+        top: 25%;
+    }
+}
+    </style>
+</head>
+<body>
+        <div class="navbar">
+            <div class="navbar-content">
+                <div class="logo">
+                    <img src="./Asset1/Newlogo.jpg" alt="Logo">
+                    <!--Iswaryam Farms-->
+                </div>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./Gallery.html">Gallery</a></li>
+                    <li><a href="./Event1.html">Events</a></li>
+                    <li><a href="./Visit.html">Visits</a></li>
+                    <li><a href="./Cultivation.html">Cultivation</a></li>
+                    <li><a href="./Amenities.html">Amenities</a></li>
+                    <li><a href="./About.html">About</a></li>
+                    <li><a href="./Contact.html">Contact</a></li>
+                    <li><a href="./FAQ.html">FAQs</a></li>
+                </ul>
+            </div>
+        </div>
+        <!--<hr color="green" size="3">-->
+        <section class="firstpic">
+            <video autoplay muted loop class="background-video">
+                <source src="./Asset1/mainvideo.mp4" type="video/mp4">
+                
+            </video>
+            <div class="text-overlay">
+                <br>WELCOME TO ISWARYAM FARMS
+            </div>
+        </section>
+            
+        <!--<hr color="green" size="3">-->
+        <section class="about">
+            <div class="about1">
+                <img src="./Asset1/backimg.jpg" >
+            </div>
+            <div class="about-text">
+                <h1 style="--i:1">About</h1>
+                <h4>Our Philosophy</h4>
+                <p>
+                    We are excited to share with you that our company now offers a unique opportunity for corporate team outings. Our farm, located near Tindivanam , is now open for corporate bookings, providing a fun and educational team-building experience for your employees.
+        Our farm offers a variety of activities such as farm tours, workshops, animal encounters, outdoor activities, cooking classes, and relaxation experiences. With these activities, your team will have a chance to learn about sustainable farming practices and get hands-on experience in agriculture.
+        Our team is committed to ensuring your team's experience is seamless from beginning to end. Our farm is equipped with comfortable accommodations, and a range of catering options to cater to different dietary requirements.
+        A corporate team outing to our farm offers a unique opportunity for your team to bond, develop new skills, and have fun together in a peaceful and rural setting. Our team will work closely with you to customize the experience based on your team's interests and preferences, and ensure that your team has an unforgettable experience.
+        Please do not hesitate to contact us to learn more about our corporate team outings and how we can customize an experience for your team. We look forward to hearing from you soon.
+                    </p>
+            </div>
+        </section>
+        <hr color="green" size="3">
+        <section class="about">
+        <div class="about-text">
+            <h1 style="--i:1">About</h1>
+            <h4>Our Philosophy</h4>
+            <p>
+                At [Farm Name], we embrace the principles of organic farming wholeheartedly. We believe that by working in harmony with nature, we not only produce superior quality fruits, vegetables, and herbs but also preserve the integrity of our environment for generations to come. Our commitment to organic practices means saying no to harmful chemicals, pesticides, and synthetic fertilizers, and saying yes to biodiversity, soil health, and ecological balance.
+                </p>
+        </div>
+        <div class="about1">
+            <img src="./Asset1/backimg.jpg" >
+        </div>
+        
+        </section>
+        <!--<hr color="green" size="3">-->
+        <section class="last">
+        <div class="icons">
+            <a href="https://www.instagram.com/iswaryam_farms?igsh=MmJ0cGgxb3RmOTJq"><i class='bx bxl-instagram'></i></a>
+            <a href="https://youtube.com/@iswaryamfarms7191?si=noAf-5vEq_Ci8MFF"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.facebook.com/share/ZBrPSWBsrJLuvsLx/?mibextid=qi2Omg"><i class='bx bxl-facebook'></i></a>
+                <a href="mailto:iswaryamfarms@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  
+                <a href="https://www.google.com/maps/place/Iswaryam+Farms+stay/@12.3129441,79.6768127,17z/data=!3m1!4b1!4m9!3m8!1s0x3a533f15df71c27b:0xa5dc4ccaf88f33e9!5m2!4m1!1i2!8m2!3d12.3129441!4d79.6768127!16s%2Fg%2F11sk692vs0?authuser=0&entry=ttu"><i class='bx bxs-location-plus' ></i></a>
+        </div>
+        <div class="heading">
+            <h1><b>ISWARYAM FARMS</b></h1>
+        </div>
+        <div class="coat">
+            <h3>In every seed, a future blooms, tended by organic farming's sustainable touch</h3>
+            <h5>Organic care, thriving earth</h5>
+            <h6>Don't panic,It's Organic</h6>
+        </div>
+        <!-- <div class="arr">
+            <a href="#backk"><i class='bx bx-up-arrow-alt'></i></a>
+        </div> -->
+        </section>
+        
+        
+        </body>
+</html>

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISWARYAM FARMS</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="./Asset1/Newlogo.jpg">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center; 
+            padding: 20px;
+        }
+        
+        .event-card {
+        width: 450px;
+        height: 450px;
+        margin: 10px;
+        border: 1px solid #fcfcfb;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 4px 8px 12px rgba(1, 104, 10, 0.5); 
+        transition: transform 0.8s;
+    }
+
+    .event-card:hover {
+        transform: scale(1.05);
+    }
+
+
+        .tug {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        /*.tug1{
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            align-items: bottom;
+        }*/
+
+        .tug-info {
+            padding: 15px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: #1b5903;
+            font-size: x-large;
+        }
+
+        p{
+            color: #206a03;
+            font-size: 15px;
+        }
+
+        .hhh{
+            color: #1b5903;
+            font-size: 47px;
+            text-align: center;
+            background-image: url(./asset1/farm\ logo.png); 
+            background-size: 120px; 
+            background-repeat: no-repeat;
+            background-position: 10px center;
+            padding: 10px;
+            text-shadow: 0.5px 0.5px 1px rgb(11, 85, 6);
+        }
+
+        video {
+            width: 500px;
+            height: 450px;
+            margin-left: 100px;
+        }
+
+        .vide1 {
+            display: flex;
+            align-items: center; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            box-shadow: 4px 8px 12px rgba(1, 104, 10, 0.5); 
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .p111{
+            margin-left: 80px;
+            flex: 1; 
+            padding-left: 25px;
+            font-size: large;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: #2c9204;
+        }
+
+        .v11{
+            width: 450px;
+            height: 380px;
+            margin-left: 0px;
+            flex: 1;
+        }
+
+        #p1111{
+            font-size: 50px;
+        }
+
+        #p1p1{
+            font-size: 20px;
+        }
+
+        .last .arr{
+            width: 100%;
+            position: static;
+            display: flex;
+            z-index: 50;
+            text-align: center;
+            justify-content: center;
+        }
+        .last .arr a
+        {
+          text-decoration: none;
+         font-size: 40px;
+         display: flex;
+         color: aliceblue;
+        }
+
+        .last .arr a:hover{
+         transition: 1s;
+        
+         }
+
+         .last
+    {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(58, 57, 57);
+    }
+
+    .last .icons
+    {
+        align-items: center;
+        justify-content: center;
+        padding: 20px 10px;
+        display: flex;
+    }
+
+    .last .icons a
+    {
+        font-size: 30px;
+        width: 60px;
+        height: 60px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        margin: 10px;
+        color: rgb(117, 118, 117);
+        opacity: 0;
+        animation: slidetop 1s ease forwards;
+    }
+
+    .last .icons a:hover{
+        transition: 1s;
+        color: black;
+        background-color: rgba(6, 251, 30, 0.957);
+        border: 0;
+        border-radius: 20px;
+
+    }
+
+    .last .heading h1
+    {
+        padding-top: 30px;
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: rgb(52, 190, 28);
+    }
+
+    .last .coat h3
+    {
+        font-size: 20px;
+        color: aliceblue;
+        padding-top: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .last .coat h5
+    {
+        font-size: 15px;
+        color: aliceblue;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .last .coat h6
+    {
+        font-size: 20px;
+        margin-top: 100px;
+        padding-top: 80px;
+        color: aliceblue;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes slideright
+    {
+        0%
+        {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+
+        100%
+        {
+            transform : translateX(0px);
+            opacity : 1;
+        }
+    }
+
+    @keyframes slidetop
+    {
+        0%
+        {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        100%
+        {
+            transform : translateY(0px);
+            opacity : 1;
+        }
+    }
+
+    body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: white;
+            color: #1b5903;
+            z-index: 1000;
+            border-bottom: 2px solid #1b5903;
+        }
+
+        .navbar-content {
+            position: relative;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            width: 99%;
+            max-width: 1272px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px 0;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Great Vibes', cursive;
+            font-size: 30px;
+        }
+
+        .navbar .logo img {
+            height: 80px; /* Adjust as needed */
+            margin-right: 60px;
+            padding: 5px;
+            padding-right: 70px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+        color: #2e2929; /* Initial color (black) */
+        text-decoration: none;
+        font-size: 17px;
+        padding: 15px 18px;
+        border-radius: 4px;
+        position: relative;
+        transition: color 0.3s, transform 0.3s; 
+
+        /* Smooth transition for color change */
+        /*font-family: Arial, Helvetica, sans-serif;*/
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    /* General link styles for navbar */
+    .navbar a {
+        transition: color 0.3s, transform 0.3s;
+        /* Adjusted transition duration for better responsiveness */
+        
+        text-decoration: none;
+        color: #3abd06; /* General link color (violet) */
+    }
+
+    .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #3ac205; /* Underline color (green) */
+    transition: width 1s ease;
+    bottom: 0;
+    left: 0;
+}
+
+/* Hover effect for navigation links */
+.navbar ul li a:hover {
+    color: #3ac205; /* Green color on hover */
+    transform: scale(1.1);
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+    .submenu1{
+        position: relative;
+    }
+    
+    .submenu1  ul{
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #075508;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .submenu1:hover ul {
+        display: block;
+    }
+
+    .submenu1 ul li a {
+        padding: 5px 8px;
+    }
+
+    .submenu1 ul li a:hover {
+        background-color: #09711c;
+    }
+
+    .allevent{
+        padding-top: 120px;
+    }
+
+    </style>
+</head> 
+<body>
+<main>
+    <div class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <img src="./Asset1/Newlogo.jpg" alt="Logo">
+                <!--Iswaryam Farms-->
+            </div>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Gallery.html">Gallery</a></li>
+                <li><a href="./Event1.html">Events</a></li>
+                <li><a href="./Visit.html">Visits</a></li>
+                <li><a href="./Cultivation.html">Cultivation</a></li>
+                <li><a href="./Amenities.html">Amenities</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+                <li><a href="./FAQ.html">FAQs</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--<h1 class="hhh">Experience Iswaryam Farms</h1>-->
+    <section class="allevent">
+        <div class="event-card">
+            <img src="./asset1/e1 (1).jpg" alt="Tug of war in earth" class="tug">
+            <div class="tug-info">
+                <h2>Tug of War</h2>
+                <p>The muddy Tug of War game is full of fun, with slipping, falling, and laughter adding to the excitement. The cheering crowd enhances the lively atmosphere.</p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <img src="./asset1/e1(7).jpg" alt="Cement bathtub" class="tug">
+            <div class="tug-info">
+                <h2>Bath nd have crunch</h2>
+                <p>The tank offers a fun adventure where you can enjoy with your friends. The clear water and spacious area create an exciting and refreshing environment for enjoyment. </p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <img src="./asset1/e1 (4).jpg" alt="Farm with us" class="tug">
+            <div class="tug-info">
+                <h2>Farm with us</h2>
+                <p>This farm is a welcoming place where you can join in planting. It's a hands-on experience, filled with learning and enjoyment in a beautiful rural setting.</p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <img src="./asset1/e1 (3).jpg" alt="Walking in a wet clayey paddy field" class="tug">
+            <div class="tug-info">
+                <h2>Walk like an Farmer!</h2>
+                <p>Walking on the farm provides a peaceful, grounding experience, connecting you with nature. The fresh air and physical activity boost mental well-being, reduce stress, and improve cardiovascular health.</p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <img src="./asset1/e1(6).jpg" alt="Group of individuals sitting in clayey paddy field and having fun chats" class="tug">
+            <div class="tug-info">
+                <h2>Chit chat your with friends and families</h2>
+                <p>The farm's serene atmosphere, with open fields and fresh air, creates a relaxed setting perfect for recollecting memories with friends. </p>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <img src="./asset1/e1(5).jpg" alt="Bathing in a well" class="tug">
+            <div class="tug-info">
+                <h2>Bath in well</h2>
+                <p>Bathing in a well is refreshing and fun, offering cool water for splashing and swimming. It boosts circulation, invigorates skin, and relieves stress.</p>
+            </div>
+        </div>
+
+    </section>
+    <br \>
+    <br \>
+    <div class="vide1">
+    <video controls class="v11">
+        <source src="./asset1/vide.mp4" type="video/mp4">
+        <source src="./asset1/vide.mp4" type="video/webm">
+        <source src="./asset1/vide.mp4" type="video/ogg">
+    </video>
+
+    <div class="p111">
+    <h2 id="p1111">Artificial Falls</h2>
+    <p id="p1p1">Experience mini falls here.</p>
+    </div>
+    </div>
+
+    <div class="last">
+        <div class="icons">
+            <a href="https://www.instagram.com/iswaryam_farms?igsh=MmJ0cGgxb3RmOTJq"><i class='bx bxl-instagram'></i></a>
+            <a href="https://youtube.com/@iswaryamfarms7191?si=noAf-5vEq_Ci8MFF"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.facebook.com/share/ZBrPSWBsrJLuvsLx/?mibextid=qi2Omg"><i class='bx bxl-facebook'></i></a>
+                <a href="mailto:iswaryamfarms@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  <a href="https://www.google.com/maps/place/Iswaryam+Farms+stay/@12.3129441,79.6768127,17z/data=!3m1!4b1!4m9!3m8!1s0x3a533f15df71c27b:0xa5dc4ccaf88f33e9!5m2!4m1!1i2!8m2!3d12.3129441!4d79.6768127!16s%2Fg%2F11sk692vs0?authuser=0&entry=ttu"><i class='bx bxs-location-plus' ></i></a>
+        </div>
+        <div class="heading">
+         <h1><b>ISWARYAM FARMS</b></h1>
+        </div>
+        <div class="coat">
+            <h3>In every seed, a future blooms, tended by organic farming's sustainable touch</h3>
+            <h5>Organic care, thriving earth</h5>
+            <h6>Don't panic,It's Organic</h6>
+        </div>
+        <!-- <div class="arr">
+            <a href="#backk"><i class='bx bx-up-arrow-alt'></i></a>
+        </div> -->
+    </div>
+</main>
+</body>
+</html>

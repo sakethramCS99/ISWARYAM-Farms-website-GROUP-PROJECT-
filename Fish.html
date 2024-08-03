@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISWARYAM FARMS</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./Asset1/Newlogo.jpg">
+    <style type="text/css">
+        body {
+            background: 
+                linear-gradient(rgba(244, 241, 241, 0.5), rgba(245, 241, 241, 0.5)), 
+                url(./Asset1/fish.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: rgb(9, 9, 9);
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 2px;
+            font-size: 25px;
+            font-family: 'Great Vibes', cursive;
+            letter-spacing: 2px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            color: #1b5903;
+            z-index: 1000;
+            border-bottom: 2px solid #1b5903;
+        }
+
+        .navbar-content {
+            position: relative;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            width: 99%;
+            max-width: 1272px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px 0;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Great Vibes', cursive;
+            font-size: 30px;
+        }
+
+        .navbar .logo img {
+            height: 80px; /* Adjust as needed */
+            margin-right: 60px;
+            padding: 5px;
+            padding-right: 70px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+        color: #2e2929; /* Initial color (black) */
+        text-decoration: none;
+        font-size: 17px;
+        padding: 15px 18px;
+        border-radius: 4px;
+        position: relative;
+        transition: color 0.3s, transform 0.3s; 
+
+      
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    /* General link styles for navbar */
+    .navbar a {
+        transition: color 0.3s, transform 0.3s;
+        /* Adjusted transition duration for better responsiveness */
+        
+        text-decoration: none;
+        color: #3abd06; /* General link color (violet) */
+    }
+
+    .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #3ac205; /* Underline color (green) */
+    transition: width 1s ease;
+    bottom: 0;
+    left: 0;
+}
+
+/* Hover effect for navigation links */
+.navbar ul li a:hover {
+    color: #3ac205; /* Green color on hover */
+    transform: scale(1.1);
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+.content {
+            padding-top: 70px; /* height of the navbar */
+        }
+
+        .section {
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .section:nth-child(odd) {
+            background-color: #f4f4f4;
+        }
+
+        .section:nth-child(even) {
+            background-color: #e4e4e4;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1efef;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #030303;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .content {
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px 2em 2em 2em;
+        }
+
+        .culti {
+            overflow-wrap: break-word;
+            text-align: justify;
+            font-size: 1rem;
+            line-height: 1.6.
+        }
+        .last
+    {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(58, 57, 57);
+    }
+
+    .last .icons
+    {
+        align-items: center;
+        justify-content: center;
+        padding: 20px 10px;
+        display: flex;
+    }
+
+    .last .icons a
+    {
+        font-size: 30px;
+        width: 60px;
+        height: 60px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        margin: 10px;
+        color: rgb(117, 118, 117);
+        opacity: 0;
+        animation: slidetop 1s ease forwards;
+    }
+
+    .last .icons a:hover{
+        transition: 1s;
+        color: black;
+        background-color: rgba(6, 251, 30, 0.957);
+        border: 0;
+        border-radius: 20px;
+
+    }
+
+    .last .heading h1
+    {
+        padding-top: 30px;
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: rgb(52, 190, 28);
+    }
+
+    .last .coat h3
+    {
+        font-size: 20px;
+        color: aliceblue;
+        padding-top: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .last .coat h5
+    {
+        font-size: 15px;
+        color: aliceblue;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .last .coat h6
+    {
+        font-size: 20px;
+        margin-top: 100px;
+        padding-top: 80px;
+        color: aliceblue;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    @keyframes slideright
+    {
+        0%
+        {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+
+        100%
+        {
+            transform : translateX(0px);
+            opacity : 1;
+        }
+    }
+
+    @keyframes slidetop
+    {
+        0%
+        {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        100%
+        {
+            transform : translateY(0px);
+            opacity : 1;
+        }
+    }
+    .submenu1 {
+    position: relative;
+}
+
+.submenu1 ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    list-style: none;
+    padding: 10px 0; /* Added padding for better spacing */
+    margin: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow for better visibility */
+    border: 1px solid #ddd; /* Added border for better definition */
+    border-radius: 5px; /* Added border radius for smooth edges */
+}
+
+.submenu1:hover ul {
+    display: block; /* Changed to block to ensure it displays correctly */
+}
+
+.submenu1 ul li {
+    margin: 0; /* Ensure no extra margin is added */
+}
+
+.submenu1 ul li a {
+    display: block; /* Ensure anchor tags take up the full width */
+    padding: 5px 20px; /* Adjust padding for better spacing */
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline */
+}
+
+.submenu1 ul li a:hover {
+    background-color: #f0f0f0; /* Light background color on hover */
+}
+.main{
+            padding-top: 120px;         /*changed*/
+        }
+    </style>
+</head>
+<body>
+ 
+
+    <div class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <img src="./Asset1/Newlogo.jpg" alt="Logo">
+                <!--Iswaryam Farms-->
+            </div>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Gallery.html">Gallery</a></li>
+                <li><a href="./Event1.html">Events</a></li>
+                <li><a href="./Visit.html">Visits</a></li>
+                <li class="submenu1">
+                    <a href="./Cultivation.html">Cultivation</a>
+                    <ul>
+                        <li><a href="./Brinjal.html">Brinjal</a></li>
+                        <li><a href="./Banana.html">Banana</a></li>
+                        <li><a href="./Guava.html">Guava</a></li>
+                        <li><a href="./Sesame.html">Elu</a></li>
+                        <li><a href="./Savuku.html">Savukku</a></li>
+                        <li><a href="./Okra.html">Okra</a></li>
+                        <li><a href="./Jasmine.html">Jasmine</a></li>
+                        <li><a href="./Fish.html">Fish</a></li>
+                        <li><a href="./Dairy.html">Dairy</a></li>
+                        <li><a href="./Greenhouse.html"></a></li>
+                    </ul>
+                </li>
+                <li><a href="./Amenities.html">Amenities</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+                <li><a href="./FAQ.html">FAQs</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="main">
+
+        <div class="content">
+            <h2>Fish Cultivation</h2>
+            <p class="culti">
+                Fish cultivation at Iswaryam Farm involves the sustainable breeding and raising of various fish species in controlled environments to ensure high-quality produce and ecological balance.
+            </p>
+            <h3>Pond Preparation</h3>
+            <p class="culti">
+                Iswaryam Farm designs ponds to optimize water circulation and oxygenation, crucial for fish health and growth.
+                <br>Prioritizing clean water through natural filtration methods and regular monitoring to maintain optimal conditions for fish.
+            </p>
+            <h3>Stocking and Feeding</h3>
+            <p class="culti">
+                Careful selection of fish species suited to local climate and pond conditions to maximize growth and yield.
+                <br>Balanced feeding regimes using natural feeds and supplements to enhance fish growth and health.
+                <br>Regular testing and adjustments to maintain ideal pH levels and water temperature for optimal fish growth.
+            </p>
+            <h3>Sustainable Practices</h3>
+            <p class="culti">
+                Using natural fertilizers and minimizing chemical inputs to promote a healthy pond ecosystem.
+                <br>Optimal use of resources like water and feed to minimize waste and environmental impact.
+            </p>
+        </div>
+    </section>
+    <section class="last">
+        <div class="icons">
+            <a href="https://www.instagram.com/iswaryam_farms?igsh=MmJ0cGgxb3RmOTJq"><i class='bx bxl-instagram'></i></a>
+            <a href="https://youtube.com/@iswaryamfarms7191?si=noAf-5vEq_Ci8MFF"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.facebook.com/share/ZBrPSWBsrJLuvsLx/?mibextid=qi2Omg"><i class='bx bxl-facebook'></i></a>
+                <a href="mailto:iswaryamfarms@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  
+                <a href="https://www.google.com/maps/place/Iswaryam+Farms+stay/@12.3129441,79.6768127,17z/data=!3m1!4b1!4m9!3m8!1s0x3a533f15df71c27b:0xa5dc4ccaf88f33e9!5m2!4m1!1i2!8m2!3d12.3129441!4d79.6768127!16s%2Fg%2F11sk692vs0?authuser=0&entry=ttu"><i class='bx bxs-location-plus' ></i></a>
+        </div>
+        <div class="heading">
+            <h1><b>ISWARYAM FARMS</b></h1>
+        </div>
+        <div class="coat">
+            <h3>The coat you guys needed</h3>
+            <h5>the coat you guys needed</h5>
+            <h6>Don't panic,It's Organic</h6>
+        </div>
+        <!-- <div class="arr">
+            <a href="#backk"><i class='bx bx-up-arrow-alt'></i></a>
+        </div> -->
+        </section>
+</body>
+</html>

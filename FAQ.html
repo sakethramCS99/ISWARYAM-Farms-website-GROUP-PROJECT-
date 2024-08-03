@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISWARYAM FARMS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.google.com/specimen/Chakra+Petch" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./Asset1/Newlogo.jpg">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        header {
+            background-color: #1b5903;
+            color: white;
+            padding: 1.5em 0;
+            text-align: center;
+            position: relative;
+        }
+
+        header .home-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+            color: #1b5903;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        header .home-button:hover {
+            background-color: #e6e6e6;
+            color: #1b5903;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        main{
+            padding: 100px 2em 2em 2em; 
+        }
+
+        .faq-section {
+            
+            /*font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/
+            padding-top: 110px;
+            background-color: rgb(234, 229, 229);
+            border: 2px solid #e6e6e6;
+            border-radius: 10px;
+            margin: 1em 0;
+            padding: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+       
+        .mainsec{
+            padding-top: 40px;
+            padding-left: 60px;
+            padding-right: 60px;
+        }
+
+        .faq-section h2 {
+            /*font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;*/
+            /*font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+            /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
+            font-family: sans-serif;
+            font-size: 20px;
+            color: #275e11;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .faq-section h2:hover {
+            color: #576153;
+        }
+        .faq-section:hover{
+            background-color: white;
+        }
+
+        .faq-section .answer {
+            color: #0b4714;
+            display: none;
+            padding-top: 1em;
+        }
+
+        .faq-section.active .answer {
+            display: block;
+        }
+
+        .toggle-icon {
+            font-size: 1em;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-section.active .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+
+        footer {
+            background-color: #1b5903;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .edit-button {
+            background-color: #1b5903;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 1em;
+        }
+
+        .edit-button:hover {
+            background-color: #144002;
+        }
+
+        .save-button {
+            background-color: #006400;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 1em;
+        }
+
+        .save-button:hover {
+            background-color: #004b00;
+        }
+
+        .edit-input {
+            width: 100%;
+            height: 100px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 0.5em;
+            font-size: 1em;
+            margin-top: 1em;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            color: #1b5903;
+            z-index: 1000;
+            border-bottom: 2px solid #1b5903;
+        }
+
+        .navbar-content {
+            position: relative;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            width: 99%;
+            max-width: 1272px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px 0;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Great Vibes', cursive;
+            font-size: 30px;
+        }
+
+        .navbar .logo img {
+            height: 80px; /* Adjust as needed */
+            margin-right: 60px;
+            padding: 5px;
+            padding-right: 70px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+        color: #2e2929; /* Initial color (black) */
+        text-decoration: none;
+        font-size: 17px;
+        padding: 15px 18px;
+        border-radius: 4px;
+        position: relative;
+        transition: color 0.3s, transform 0.3s; 
+
+        /* Smooth transition for color change */
+       /* /font-family: Arial, Helvetica, sans-serif;/*/
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    /* General link styles for navbar */
+    .navbar a {
+        transition: color 0.3s, transform 0.3s;
+        /* Adjusted transition duration for better responsiveness */
+        
+        text-decoration: none;
+        color: #3abd06; /* General link color (violet) */
+    }
+
+    .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #3ac205; /* Underline color (green) */
+    transition: width 1s ease;
+    bottom: 0;
+    left: 0;
+}
+
+/* Hover effect for navigation links */
+.navbar ul li a:hover {
+    color: #3ac205; /* Green color on hover */
+    transform: scale(1.1);
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+        .content {
+            padding-top: 70px; /* height of the navbar */
+        }
+
+        .section {
+            padding: 20px;
+            height: 100vh;
+        }
+
+        .section:nth-child(odd) {
+            background-color: #f4f4f4;
+        }
+
+        .section:nth-child(even) {
+            background-color: #e4e4e4;
+        }
+        .last
+    {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(58, 57, 57);
+    }
+
+    .last .icons
+    {
+        align-items: center;
+        justify-content: center;
+        padding: 20px 10px;
+        display: flex;
+    }
+
+    .last .icons a
+    {
+        font-size: 30px;
+        width: 60px;
+        height: 60px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        margin: 10px;
+        color: rgb(117,118,117);
+        opacity: 1;
+        animation: slidetop 1s ease forwards;
+    }
+
+    .last .icons a:hover{
+        transition: 1s;
+        color: rgb(0, 0, 0);
+        background-color: rgba(6, 251, 30, 0.957);
+        border: 0;
+        border-radius: 20px;
+
+    }
+
+    .last .heading h1
+    {
+        padding-top: 30px;
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: rgb(52, 190, 28);
+    }
+
+    .last .coat h3
+    {
+        font-size: 20px;
+        color: aliceblue;
+        padding-top: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .last .coat h5
+    {
+        font-size: 15px;
+        color: aliceblue;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .last .coat h6
+    {
+        font-size: 20px;
+        margin-top: 100px;
+        padding-top: 80px;
+        color: aliceblue;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    @keyframes slideright
+    {
+        0%
+        {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+
+        100%
+        {
+            transform : translateX(0px);
+            opacity : 1;
+        }
+    }
+
+    @keyframes slidetop
+    {
+        0%
+        {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        100%
+        {
+            transform : translateY(0px);
+            opacity : 1;
+        }
+    }
+
+    .arr {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none; /* Initially hidden */
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+.arr a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #000;
+}
+
+.arr a:hover {
+    color: #555;
+}
+
+    </style>
+    <script>
+        function showModal(content, sectionId) {
+            const modal = document.getElementById('faqModal');
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = content;
+            modalContent.setAttribute('data-section-id', sectionId);
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('faqModal');
+            modal.style.display = 'none';
+        }
+
+        function enableEdit(sectionId) {
+            const section = document.getElementById(sectionId);
+            const answer = section.querySelector('.answer').textContent;
+            const editForm = `
+                <textarea class="edit-input">${answer}</textarea>
+                <button class="save-button" onclick="saveAnswer('${sectionId}')">Save</button>
+            `;
+            showModal(editForm, sectionId);
+        }
+
+        function saveAnswer(sectionId) {
+            const modalContent = document.getElementById('modalContent');
+            const newAnswer = modalContent.querySelector('.edit-input').value;
+            const section = document.getElementById(sectionId);
+            section.querySelector('.answer').textContent = newAnswer;
+            closeModal();
+        }
+
+        window.onload = () => {
+            const faqs = document.querySelectorAll('.faq-section');
+            faqs.forEach(faq => {
+                faq.addEventListener('click', () => {
+                    const sectionId = faq.getAttribute('id');
+                    enableEdit(sectionId);
+                });
+            });
+
+            document.getElementsByClassName('close')[0].onclick = closeModal;
+            window.onclick = (event) => {
+                const modal = document.getElementById('faqModal');
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+  <!-- <header>
+        <button class="home-button" onclick="window.location.href='index.html';">Home</button>
+        <h1>Frequently Asked Questions</h1>
+    </header>-->
+    <section class="mainsec">
+    <main>
+        <section class="faq-section">
+            <h2>How many people can stay in a room? <span class="toggle-icon">v</span></h2>
+            <div class="answer">
+                <hr color="grey" size="2">
+                <p>Our rooms can accommodate up to 4 people comfortably.</p>
+            </div>
+        </section>
+        <section class="faq-section">
+            <h2>What is the pricing for a room for a day? <span class="toggle-icon">v</span></h2>
+            <div class="answer">
+                <hr color="grey" size="2">
+                <p>The pricing for a room for a day varies depending on the room type and season. Please check our booking page for the most accurate rates.</p>
+            </div>
+        </section>
+        <section class="faq-section">
+            <h2>What are the timings for the farm? <span class="toggle-icon">v</span></h2>
+            <div class="answer">
+                <hr color="grey" size="2">
+                <p>The farm is open daily from 9 AM to 6 PM.</p>
+            </div>
+        </section>
+        <section class="faq-section">
+            <h2>Do you provide discounts for longer stays? <span class="toggle-icon">v</span></h2>
+            <div class="answer">
+                <hr color="grey" size="2">
+                <p>Yes, we offer discounts for stays longer than a week. Please contact our customer service for more details.</p>
+            </div>
+        </section>
+        <section class="faq-section">
+            <h2>Is breakfast included in the room price? <span class="toggle-icon">v</span></h2>
+            <div class="answer">
+                <hr color="grey" size="2">
+                <p>Yes, breakfast is included in the room price.</p>
+            </div>
+        </section>
+        <section class="faq-section">
+            <h2>Do you have facilities for pets? <span class="toggle-icon">v</span></h2>
+            <div class="answer">
+                <hr color="grey" size="2">
+                <p>Yes, we have pet-friendly rooms available. Please notify us in advance if you are bringing a pet.</p>
+            </div>
+        </section>
+        <section class="faq-section">
+            <h2>Are there any additional fees or taxes? <span class="toggle-icon">v</span></h2>
+            <div class="answer">
+                <hr color="grey" size="2">
+                <p>All prices are inclusive of taxes. There are no additional fees unless specified at the time of booking.</p>
+            </div>
+        </section>
+        <section class="faq-section">
+            <h2>What amenities are available in each room? <span class="toggle-icon">v</span></h2>
+            <div class="answer">
+                <hr color="grey" size="2">
+                <p>Each room is equipped with free Wi-Fi, a flat-screen TV, air conditioning, and a mini-fridge.</p>
+            </div>
+        </section>
+        <section class="faq-section">
+            <h2>Is there a minimum age requirement for guests? <span class="toggle-icon">v</span></h2>
+            <div class="answer">
+                <hr color="grey" size="2">
+                <p>Yes, the minimum age requirement for guests is 18 years.</p>
+            </div>
+        </section>
+        <section class="faq-section">
+            <h2>Can I cancel or modify my reservation? <span class="toggle-icon">v</span></h2>
+            <div class="answer">
+                <hr color="grey" size="2">
+                <p>Yes, you can cancel or modify your reservation up to 48 hours before your arrival date without any charges.</p>
+            </div>
+        </section>
+    </main>
+</section>
+   <!--- <footer>
+        <p>&copy; 2024</p>
+    </footer>-->
+
+    <div id="faqModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+    <div class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <img src="./Asset1/Newlogo.jpg" alt="Logo">
+                <!--Iswaryam Farms-->
+            </div>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Gallery.html">Gallery</a></li>
+                <li><a href="./Event1.html">Events</a></li>
+                <li><a href="./Visit.html">Visits</a></li>
+                <li><a href="./Cultivation.html">Cultivation</a></li>
+                <li><a href="./Amenities.html">Amenities</a></li>
+                <li><a href="./About.html">About</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+                <li><a href="./FAQ.html">FAQs</a></li>
+            </ul>
+        </div>
+    </div>
+    <section class="last">
+        <div class="icons">
+            <a href="https://www.instagram.com/iswaryam_farms?igsh=MmJ0cGgxb3RmOTJq"><i class='bx bxl-instagram'></i></a>
+            <a href="https://youtube.com/@iswaryamfarms7191?si=noAf-5vEq_Ci8MFF"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.facebook.com/share/ZBrPSWBsrJLuvsLx/?mibextid=qi2Omg"><i class='bx bxl-facebook'></i></a>
+                <a href="mailto:iswaryamfarms@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  
+                <a href="https://www.google.com/maps/place/Iswaryam+Farms+stay/@12.3129441,79.6768127,17z/data=!3m1!4b1!4m9!3m8!1s0x3a533f15df71c27b:0xa5dc4ccaf88f33e9!5m2!4m1!1i2!8m2!3d12.3129441!4d79.6768127!16s%2Fg%2F11sk692vs0?authuser=0&entry=ttu"><i class='bx bxs-location-plus' ></i></a>
+        </div>
+        <div class="heading">
+            <h1><b>ISWARYAM FARMS</b></h1>
+        </div>
+        <div class="coat">
+            <h3>The coat you guys needed</h3>
+            <h5>the coat you guys needed</h5>
+            <h6>Don't panic,It's Organic</h6>
+        </div>
+        <!-- <div class="arr">
+            <a href="#backk"><i class='bx bx-up-arrow-alt'></i></a>
+        </div> -->
+        </section>
+        
+        <hr color="green" size="3">
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const faqSections = document.querySelectorAll('.faq-section');
+                faqSections.forEach(section => {
+                    section.addEventListener('click', function () {
+                        this.classList.toggle('active');
+                    });
+                });
+            });
+
+            window.onscroll = function() {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    const backToTopButton = document.getElementById("backToTop");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopButton.style.display = "block";
+    } else {
+        backToTopButton.style.display = "none";
+    }
+}
+
+// Scroll to the top of the document when the user clicks on the button
+document.getElementById("backToTop").addEventListener("click", function(event) {
+    event.preventDefault();
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+});
+
+        </script>
+        
+</body>
+</html>

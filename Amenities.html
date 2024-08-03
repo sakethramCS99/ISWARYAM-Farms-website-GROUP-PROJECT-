@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISWARYAM FARMS</title>
+    <link rel="icon" type="image/x-icon" href="./Asset1/Newlogo.jpg">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <style>
+        /* Add these styles to your existing CSS code */
+
+/* Animation for header */
+/*header {
+    animation: fadeInDown 1s ease-out, slideIn 1s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  } */
+  
+  /* Animation for parallax */
+  /* Add these styles to your existing CSS code */
+
+/* Animation for header */
+/* Add these styles to your existing CSS code */
+
+.parallax {
+    margin-bottom: -50px; /* Add a negative margin to overlap with the amenities */
+  }
+  
+  main {
+    margin-top: -100px; /* Add a negative margin to create a seamless transition */
+    padding-top: 50px; /* Add padding to compensate for the negative margin */
+  }
+
+header {
+    animation: fadeInDown 1s ease-out, slideIn 1s ease-out, blurIn 1s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes blurIn {
+    from {
+      filter: blur(10px);
+    }
+    to {
+      filter: blur(0);
+    }
+  }
+  
+  /* Animation for parallax */
+  
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.9);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes KenBurns {
+    0% {
+      transform: scale(1) translate(0, 0);
+    }
+    100% {
+      transform: scale(1.2) translate(-10%, -10%);
+    }
+  }
+  
+  /* Animation for main content */
+  main {
+    animation: fadeIn 1.5s ease-out, slideUp 1.5s ease-out, staggerIn 1.5s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes staggerIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  main section {
+    animation-delay: 0.5s;
+  }
+  
+  main section:nth-child(2) {
+    animation-delay: 1s;
+  }
+  
+  main section:nth-child(3) {
+    animation-delay: 1.5s;
+  }
+  
+  /* Animation for amenities */
+  .amenity {
+    animation: zoomIn 1s ease-out, fadeIn 1s ease-out, shadowIn 1s ease-out;
+  }
+  
+  
+  
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes shadowPulse {
+    from {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    }
+    to {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  @keyframes shadowIn {
+    from {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    to {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  }
+  
+  /* Animation for modal */
+  .modal-content {
+    animation: zoomIn 0.5s ease-out, fadeIn 0.5s ease-out, blurIn 0.5s ease-out;
+  }
+  
+  .close {
+    animation: rotate 0.5s ease-out, pulse 0.5s ease-out;
+  }
+  
+  
+  /* Animation for footer */
+  
+  
+  /* Additional styles for a professional look */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Add these styles to your existing CSS code */
+
+.parallax {
+    background-color: #333; /* Change the background color to a dark gray */
+    background-image: none; /* Remove the background image */
+    height: 100vh; /* Keep the height at 100vh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Keep the text color as white */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Keep the text shadow */
+    font-size: 48px; /* Increase the font size */
+    font-weight: bold; /* Make the font bold */
+  }
+  
+  .parallax h1 {
+    margin: 0; /* Remove the margin */
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    gap: 1.5em;
+    padding: 2em;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .amenity {
+    background-color: #fff;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .amenity img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 1em;
+    
+  }
+  
+  
+  
+  .amenity-content {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeInContent 1s ease forwards;
+    animation-delay: 0.5s;
+    text-align: left;
+  }
+  
+  @keyframes fadeInContent {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  
+    
+    
+
+  
+  .parallax {
+    animation: fadeIn 1.5s ease-out, zoomIn 1.5s ease-out;
+  }
+  
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.9);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Animation for main content */
+  main {
+    animation: fadeIn 1.5s ease-out, slideUp 1.5s ease-out;
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(100%);
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Animation for amenities */
+  .amenity {
+    animation: zoomIn 1s ease-out, fadeIn 1s ease-out;
+  }
+  
+  
+  
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  /* Animation for modal */
+  .modal-content {
+    animation: zoomIn 0.5s ease-out, fadeIn 0.5s ease-out;
+  }
+  
+  .close {
+    animation: rotate 0.5s ease-out;
+  }
+  
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Animation for footer */
+ 
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #1b5903;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        header .home-button {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: white;
+            color: #1b5903;
+            border: none;
+            border-radius: 5px;
+            padding: 0.5em 1em;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        header .home-button:hover {
+            background-color: #e6e6e6;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 500;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .parallax {
+            background-image: url('resort.jpg');
+            min-height: 400px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            margin-top: 80px; /* Adjusted margin */
+        }
+
+        .parallax h2 {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2.5em;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+            animation: fadeInDown 1s ease-out;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 columns */
+            grid-auto-rows: auto; /* Auto rows based on content */
+            gap: 1.5em;
+            padding: 2em;
+            max-width: 1200px;
+            margin: auto;
+            animation: fadeIn 1.5s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .amenity {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align items at the start */
+            padding: 1.5em;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            animation: zoomIn 1s ease-out; /* Apply zoomIn animation */
+            background-color: transparent;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.9); /* Start slightly smaller */
+                opacity: 0;
+            }
+            to {
+                transform: scale(1); /* End at normal size */
+                opacity: 1;
+            }
+        }
+
+        .amenity img {
+            width: 350px;
+            height: 350px;
+            margin-bottom: 1em; /* Space between image and text */
+           
+        }
+
+        
+
+        .amenity-content {
+            opacity: 0;
+          
+            animation: fadeInContent 1s ease forwards;
+            animation-delay: 0.5s;
+            text-align: left; /* Align text to the left */
+        }
+
+        @keyframes fadeInContent {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .amenity h2 {
+            margin: 0;
+            font-size: 2em;
+            font-weight: 500;
+        }
+
+        .amenity p {
+            font-size: 1.2em;
+            font-weight: 300;
+            color: #666;
+            margin-top: 0.5em;
+        }
+
+       
+
+       
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            text-align: center;
+            margin: 5% auto;
+            max-width: 80%;
+            max-height: 80%;
+            animation: zoomIn 0.5s ease;
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.7);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .close {
+            color: white;
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: white;
+            color: #1b5903;
+            z-index: 1000;
+            border-bottom: 2px solid #1b5903;
+        }
+
+        .navbar-content {
+            position: relative;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            width: 99%;
+            max-width: 1272px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px 0;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            font-family: 'Great Vibes', cursive;
+            font-size: 30px;
+        }
+
+        .navbar .logo img {
+            height: 80px; /* Adjust as needed */
+            margin-right: 60px;
+            padding: 5px;
+            padding-right: 70px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+
+        .navbar ul li a {
+        color: #000000; /* Initial color (black) */
+        text-decoration: none;
+        font-size: 17px;
+        padding: 15px 18px;
+        border-radius: 4px;
+        position: relative;
+        transition: color 0.3s, transform 0.3s; 
+
+        /* Smooth transition for color change */
+       /* /font-family: Arial, Helvetica, sans-serif;/*/
+       font-weight: 400;
+       font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+        }
+
+    /* General link styles for navbar */
+    .navbar a {
+        transition: color 0.3s, transform 0.3s;
+        /* Adjusted transition duration for better responsiveness */
+        
+        text-decoration: none;
+        color: #3abd06; /* General link color (violet) */
+    }
+
+    .navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    background: #3ac205; /* Underline color (green) */
+    transition: width 1s ease;
+    bottom: 0;
+    left: 0;
+}
+
+/* Hover effect for navigation links */
+.navbar ul li a:hover {
+    color: #3ac205; /* Green color on hover */
+    transform: scale(1.1);
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.last
+    {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(58, 57, 57);
+    }
+
+    .last .icons
+    {
+        align-items: center;
+        justify-content: center;
+        padding: 20px 10px;
+        display: flex;
+    }
+
+    .last .icons a
+    {
+        font-size: 30px;
+        width: 60px;
+        height: 60px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        margin: 10px;
+        color: rgb(117,118,117);
+        opacity: 1;
+        animation: slidetop 1s ease forwards;
+    }
+
+    .last .icons a:hover{
+        transition: 1s;
+        color: rgb(0, 0, 0);
+        background-color: rgba(6, 251, 30, 0.957);
+        border: 0;
+        border-radius: 20px;
+
+    }
+
+    .last .heading h1
+    {
+        padding-top: 30px;
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        color: rgb(52, 190, 28);
+    }
+
+    .last .coat h3
+    {
+        font-size: 20px;
+        color: aliceblue;
+        padding-top: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .last .coat h5
+    {
+        font-size: 15px;
+        color: aliceblue;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .last .coat h6
+    {
+        font-size: 20px;
+        margin-top: 100px;
+        padding-top: 80px;
+        color: aliceblue;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    @keyframes slideright
+    {
+        0%
+        {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+
+        100%
+        {
+            transform : translateX(0px);
+            opacity : 1;
+        }
+    }
+
+    @keyframes slidetop
+    {
+        0%
+        {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+
+        100%
+        {
+            transform : translateY(0px);
+            opacity : 1;
+        }
+    }
+    </style>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            const formattedTime = now.toLocaleString('en-US', {
+                year: 'numeric',
+                month: 'short',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true
+            });
+            document.getElementById('datetime').textContent = formattedTime;
+        }
+
+        function showModal(imageSrc) {
+            const modal = document.getElementById('amenityModal');
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `<span class="close" onclick="closeModal()">&times;</span><img src="${imageSrc}" alt="Amenity Image">`;
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('amenityModal');
+            modal.style.display = 'none';
+        }
+
+        window.onload = () => {
+            const amenities = document.querySelectorAll('.amenity');
+            amenities.forEach(amenity => {
+                amenity.addEventListener('click', () => {
+                    const imageSrc = amenity.querySelector('img').src;
+                    showModal(imageSrc);
+                });
+            });
+
+            document.getElementsByClassName('close')[0].onclick = closeModal;
+            window.onclick = (event) => {
+                const modal = document.getElementById('amenityModal');
+                if (event.target === modal) {
+                    closeModal();
+                }
+            };
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <button class="home-button" onclick="window.location.href='index.html';">Home</button>
+        <h1>Hotel Room Amenities</h1>
+    </header>
+    <!--<div class="parallax">
+        <h2>Experience Luxury</h2>
+    </div>-->
+
+    <div class="navbar">
+      <div class="navbar-content">
+          <div class="logo">
+              <img src="./Asset1/Newlogo.jpg" alt="Logo">
+              <!--Iswaryam Farms-->
+          </div>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./Gallery.html">Gallery</a></li>
+            <li><a href="./Event1.html">Events</a></li>
+            <li><a href="./Visit.html">Visits</a></li>
+            <li><a href="./Cultivation.html">Cultivation</a></li>
+            <li><a href="./Amenities.html">Amenities</a></li>
+            <li><a href="./About.html">About</a></li>
+            <li><a href="./Contact.html">Contact</a></li>
+            <li><a href="./FAQ.html">FAQs</a></li>
+        </ul>
+      </div>
+  </div>
+    <main>
+        <!-- First Row -->
+        <section class="amenity" id="bedroom">
+            <img src="./Asset1/bed5.jpg" alt="Bedroom">
+            <div class="amenity-content">
+                <h2>Bedroom(4 Available)</h2>
+                <p>Relax in a cozy bedroom with a comfortable bed and soft linens. Enjoy the view from your window or balcony.</p>
+            </div>
+        </section>
+        <section class="amenity" id="restroom">
+            <img src="./Asset1/t1.jpg" alt="Restroom">
+            <div class="amenity-content">
+                <h2>Restroom(4 Available)</h2>
+                <p>Clean and modern restroom with all necessary amenities. Pamper yourself with our luxurious bath products.</p>
+            </div>
+        </section>
+
+        <!-- Second Row -->
+        <section class="amenity" id="ac">
+            <img src="./Asset1/AC.png" alt="Air Conditioning">
+            <div class="amenity-content">
+                <h2>Air Conditioning(2 Available)</h2>
+                <p>Enjoy a comfortable stay with climate control in every room. Perfect for any season, keeping you cool in summer and warm in winter.</p>
+            </div>
+        </section>
+        <section class="amenity" id="kitchen">
+            <img src="./Asset1/ter2.jpg" alt="Kitchen">
+            <div class="amenity-content">
+                <h2>Kitchen</h2>
+                <p>Fully equipped kitchen for all your cooking needs. Includes a state-of-the-art oven, stove, refrigerator, and dishwasher.</p>
+            </div>
+        </section>
+        
+        <!-- Third Row -->
+        <section class="amenity" id="living-room-2">
+            <img src="./Asset1/bed1.jpg" alt="Living Room 2">
+            <div class="amenity-content">
+                <h2>Living Room(2 Available)</h2>
+                <p>Spacious living room with comfortable seating and entertainment options.</p>
+            </div>
+        </section>
+        <section class="amenity" id="living-room-2">
+          <img src="./Asset1/bed4.jpg" alt="Living Room 2">
+          <div class="amenity-content">
+              <h2>Fridge</h2>
+              <p>Can store your snacks, vegetables and foods</p>
+          </div>
+      </section>
+        <section class="amenity" id="mini-falls">
+            <img src="./Asset1/minfalls.jpg" alt="Mini Falls">
+            <div class="amenity-content">
+                <h2>Mini Falls</h2>
+                <p>Experience tranquility with an mini waterfall. Perfect for relaxation and meditation.</p>
+            </div>
+        </section>
+
+        <section class="amenity" id="mini-falls">
+          <img src="./Asset1/e1 (2).jpg" alt="Mini Falls">
+          <div class="amenity-content">
+              <h2>Pump Set</h2>
+              <p>Bathing in the pump set, surrounded by a lush canopy of trees, felt like a refreshing escape into nature's embrace.</p>
+          </div>
+      </section>
+
+        <!-- Fourth Row -->
+        <section class="amenity" id="heater">
+            <img src="./Asset1/heater1.png" alt="Heater">
+            <div class="amenity-content">
+                <h2>Heater(4 Available)</h2>
+                <p>Stay warm with a modern heater in your room. Adjust the temperature to your comfort with ease.</p>
+            </div>
+        </section>
+        <section class="amenity" id="solar">
+          <img src="./Asset1/solar.jpg" alt="Solar">
+
+            <div class="amenity-content">
+              
+              <h2>Solar</h2>
+              <p>We are committed to sustainability with our solar-powered facilities.</p>
+          </div>
+        </section>
+    <!--<section class="last">
+      <div class="icons">
+          <a href="https://www.instagram.com/iswaryam_farms?igsh=MmJ0cGgxb3RmOTJq"><i class='bx bxl-instagram'></i></a>
+          <a href="https://youtube.com/@iswaryamfarms7191?si=noAf-5vEq_Ci8MFF"><i class='bx bxl-youtube'></i></a>
+              <a href="https://www.facebook.com/share/ZBrPSWBsrJLuvsLx/?mibextid=qi2Omg"><i class='bx bxl-facebook'></i></a>
+              <a href="mailto:iswaryamfarms@gmail.com">
+                  <i class="fas fa-envelope"></i>
+                </a>
+                
+              <a href="https://www.google.com/maps/place/Iswaryam+Farms+stay/@12.3129441,79.6768127,17z/data=!3m1!4b1!4m9!3m8!1s0x3a533f15df71c27b:0xa5dc4ccaf88f33e9!5m2!4m1!1i2!8m2!3d12.3129441!4d79.6768127!16s%2Fg%2F11sk692vs0?authuser=0&entry=ttu"><i class='bx bxs-location-plus' ></i></a>
+      </div>
+      <div class="heading">
+          <h1><b>ISWARYAM FARMS</b></h1>
+      </div>
+      <div class="coat">
+          <h3>The coat you guys needed</h3>
+          <h5>the coat you guys needed</h5>
+          <h6>Don't panic,It's Organic</h6>
+      </div>
+      <div class="arr">
+          <a href="#backk"><i class='bx bx-up-arrow-alt'></i></a>
+      </div>
+      </section>-->
+      </main>
+      <section class="last">
+        <div class="icons">
+            <a href="https://www.instagram.com/iswaryam_farms?igsh=MmJ0cGgxb3RmOTJq"><i class='bx bxl-instagram'></i></a>
+            <a href="https://youtube.com/@iswaryamfarms7191?si=noAf-5vEq_Ci8MFF"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.facebook.com/share/ZBrPSWBsrJLuvsLx/?mibextid=qi2Omg"><i class='bx bxl-facebook'></i></a>
+                <a href="mailto:iswaryamfarms@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  
+                <a href="https://www.google.com/maps/place/Iswaryam+Farms+stay/@12.3129441,79.6768127,17z/data=!3m1!4b1!4m9!3m8!1s0x3a533f15df71c27b:0xa5dc4ccaf88f33e9!5m2!4m1!1i2!8m2!3d12.3129441!4d79.6768127!16s%2Fg%2F11sk692vs0?authuser=0&entry=ttu"><i class='bx bxs-location-plus' ></i></a>
+        </div>
+        <div class="heading">
+            <h1><b>ISWARYAM FARMS</b></h1>
+        </div>
+        <div class="coat">
+            <h3>In every seed, a future blooms, tended by organic farming's sustainable touch</h3>
+            <h5>Organic care, thriving earth</h5>
+            <h6>Don't panic,It's Organic</h6>
+        </div>
+        <!-- <div class="arr">
+            <a href="#backk"><i class='bx bx-up-arrow-alt'></i></a>
+        </div> -->
+        </section>
+</body>
+</html>
